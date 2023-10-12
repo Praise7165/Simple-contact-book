@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Contact Book</title>
+        <script src="./script.js" defer></script>
+
+
+        <style>
+
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+      
+            body {
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-size: 16px;
+            }
+
+            section {
+              height: 100dvh;
+              width: 100dvw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+      
+            main {
+              max-width: 480px;
+              margin: 0 auto;
+              padding: 0 4rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+
+            input {
+                width: 20rem;
+                padding: 1rem;
+                border: 1px solid rgb(160, 147, 147);
+                border-radius: 56px;
+                font-size: inherit;
+            }
+
+            div p {
+                margin: 1rem 0 2rem;
+                line-height: 1.6;
+            }
+
+            .para {
+                padding: .5rem;
+                background-color: blue;
+                color: whitesmoke;
+                visibility: hidden;
+                border-radius: 3rem;
+                margin-top: 3rem;
+
+            }
+
+            input::placeholder {
+                font-size: 1rem;
+            }
+      
+            @media only screen and (max-width: 480px) {
+      
+              main {
+                margin: 0 1rem;
+              }
+
+              section {
+                justify-content: flex-start;
+              }
+      
+            }
+
+          </style>
+    </head>
+    <body>
+        <section>
+            <main>
+
+                <div>
+                    <h1>Search by contact name</h1>
+                    <p>Enter the name of the contact you are looking for in the search bar below</p>
+                </div>
+                
+                <input type="text" id="search" placeholder="Enter a name">
+        
+        
+                <p class="para"></p>
+            </main>
+        </section>
+        
+
+    </body>
+</html>
