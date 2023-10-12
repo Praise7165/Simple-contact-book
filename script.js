@@ -25,7 +25,7 @@ const contacts = [
     "Ruby:1122334", "Victor:4458762", "Janet:1122333",
 ];
 
-contacts.sort()
+contacts.sort();
 
 
 const para = document.querySelector(".para");
@@ -47,7 +47,7 @@ input.addEventListener("input", () => {
         const splitContact = contact.split(":");
 
         if (splitContact[0].toLowerCase().startsWith(searchName)) {
-            para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+            para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}`;
             break;
         }
 
@@ -70,5 +70,34 @@ input.addEventListener("blur", () => {
     inputLength ? para.style.visibility = "visible" : para.style.visibility = "hidden";
 
 
-})
+});
+
+
+
+
+para.addEventListener('click', function() {
+
+    
+
+    const lastSpace = para.textContent.lastIndexOf(" ");
+    const phoneNo = para.textContent.slice(lastSpace + 1);
+
+
+    // Use the Clipboard API to copy text to the clipboard
+    navigator.clipboard.writeText(phoneNo)
+    .then(() => {
+      // Successfully copied
+      window.alert('Text copied to clipboard: ' + phoneNo);
+    })
+    .catch(err => {
+      // Handle errors, if any
+      console.error('Failed to copy text: ', err);
+    });
+
+});
+
+
+
+
+
 
