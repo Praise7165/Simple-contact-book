@@ -50,6 +50,7 @@ input.addEventListener("input", () => {
             para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
             break;
         }
+
     }
 
     if (para.textContent === "" ) {
@@ -57,9 +58,6 @@ input.addEventListener("input", () => {
     } else if (input.value === "") {
         para.style.visibility = "hidden"; 
     }
-
-
-    
 
 });
 
