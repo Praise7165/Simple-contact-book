@@ -63,6 +63,10 @@ input.addEventListener("input", () => {
 
 
 input.addEventListener("blur", () => {
-    para.style.visibility = "hidden";
+
+    if (input.value.trim().length > 1) {
+        para.style.visibility = "visible"; 
+    }
+    else para.style.visibility = "hidden";
 })
 
